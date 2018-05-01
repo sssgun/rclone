@@ -36,7 +36,7 @@ func mountOptions(device string) (options []fuse.MountOption) {
 		fuse.Subtype("rclone"),
 		fuse.FSName(device), fuse.VolumeName(volName),
 		fuse.NoAppleDouble(),
-		fuse.NoAppleXattr(),
+		// FIXME fuse.NoAppleXattr(), disable as a test
 
 		// Options from benchmarking in the fuse module
 		//fuse.MaxReadahead(64 * 1024 * 1024),
